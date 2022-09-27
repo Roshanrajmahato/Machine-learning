@@ -3,7 +3,7 @@ from typing import List
 
 #declaring variable for setup functions
 PROJECT_NAME="housing-predictor"
-VERSION="0.0.4"
+VERSION="0.0.9"
 AUTHOR="Roshan raj mahato"
 DESCRIPTION="This is a first batch Machine learning Project"
 REQUIREMENT_FILE_NAME="requirements.txt"
@@ -12,7 +12,7 @@ HYPHEN_E_DOT="-e ."
 
 def get_requirements_list() -> List[str]:
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
-        return requirement_file.readlines()
+        return requirement_file.readlines().remove("-e .")
 
     """
     Description :This function is going to return list of requirement mention 
